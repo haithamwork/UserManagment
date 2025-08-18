@@ -40,7 +40,7 @@
     qsa('[data-site-name]').forEach(el => el.textContent = SITE.name);
     const brandMark = qs('.brand-mark');
     if (brandMark) {
-      const letters = (SITE.name || '').replace(/[^A-Za-z]/g, '').slice(0, 2).toUpperCase() || 'AR';
+      const letters = (SITE.name || '').replace(/[^A-Za-zأ-ي]/g, '').slice(0, 2).toUpperCase() || 'AR';
       brandMark.textContent = letters;
     }
     document.title = `${SITE.name} Cleaning Services | Professional Residential & Commercial Cleaning`;
@@ -100,6 +100,57 @@
     });
 
     initSlider(track);
+  }
+
+  function applyI18n() {
+    const lang = CONTENT.lang || 'en';
+    const dict = CONTENT.i18n?.[lang];
+    if (!dict) return;
+    const html = document.documentElement;
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+    // Generic text replacements
+    qsa('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const text = key.split('.').reduce((acc, part) => acc && acc[part], dict);
+      if (typeof text === 'string') el.textContent = text;
+    });
+
+    // About section dynamic pieces
+    const aboutTitle = byId('about-title');
+    if (aboutTitle) {
+      const siteSpan = aboutTitle.querySelector('[data-site-name]');
+      const baseTitle = dict.about.title || 'About';
+      aboutTitle.firstChild && (aboutTitle.firstChild.textContent = baseTitle + ' ');
+      if (!aboutTitle.firstChild) {
+        aboutTitle.insertAdjacentText('afterbegin', baseTitle + ' ');
+      }
+      if (siteSpan) siteSpan.textContent = SITE.name;
+    }
+    const aboutBody = byId('about-body');
+    if (aboutBody) aboutBody.textContent = dict.about.body;
+
+    const bullets = byId('about-bullets');
+    if (bullets) {
+      bullets.innerHTML = '';
+      (dict.about.bullets || []).forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        bullets.appendChild(li);
+      });
+    }
+    const features = byId('about-features');
+    const whyTitle = byId('about-why-title');
+    if (whyTitle) whyTitle.textContent = dict.about.whyTitle;
+    if (features) {
+      features.innerHTML = '';
+      (dict.about.features || []).forEach(text => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="feature-icon">✓</span><span>${text}</span>`;
+        features.appendChild(li);
+      });
+    }
   }
 
   function initSlider(track) {
@@ -182,9 +233,22 @@
       renderGallery();
       renderTestimonials();
       renderMap();
+      applyI18n();
       initNav();
     } catch (err) {
       console.error('Initialization error', err);
     }
+  });
+
+  // Language switcher
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.lang-btn');
+    if (!btn) return;
+    const selected = btn.getAttribute('data-lang');
+    if (!CONTENT.i18n || !CONTENT.i18n[selected]) return;
+    CONTENT.lang = selected;
+    qsa('.lang-btn').forEach(b => b.classList.toggle('is-active', b === btn));
+    qsa('.lang-btn').forEach(b => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
+    applyI18n();
   });
 })();

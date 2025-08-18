@@ -11,6 +11,55 @@ const SITE = {
 };
 
 const CONTENT = {
+  lang: 'en',
+  i18n: {
+    en: {
+      a11y: { skip: 'Skip to content' },
+      map: { placeholder: 'Map placeholder' },
+      nav: { home: 'Home', services: 'Services', about: 'About', gallery: 'Gallery', testimonials: 'Testimonials', contact: 'Contact' },
+      cta: { whatsapp: 'WhatsApp', call: 'Call', bookWhatsApp: 'Book on WhatsApp', callNow: 'Call Now' },
+      servicesSection: { title: 'Our Services', subtitle: 'Flexible, high-quality cleaning tailored to your needs.' },
+      gallerySection: { title: 'Gallery', subtitle: 'Recent work and results.' },
+      testimonialsSection: { title: 'What our clients say', subtitle: 'Real feedback from happy customers.' },
+      contactSection: { title: 'Get in touch', subtitle: 'We respond quickly on WhatsApp and phone.', phone: 'Phone', address: 'Address', hours: 'Hours', chatWhatsapp: 'Chat on WhatsApp', callUs: 'Call us' },
+      footer: { rights: 'All rights reserved.' },
+      about: {
+        title: 'About',
+        body: 'We provide professional cleaning for homes, offices, and facilities. Our trained team uses safe materials and proven processes to deliver excellent results—every time.',
+        bullets: [
+          'Experienced and vetted staff',
+          'Eco-friendly materials and methods',
+          'Transparent pricing, no surprises',
+          'On time, every time'
+        ],
+        whyTitle: 'Why choose us',
+        features: ['24/7 availability', 'Custom schedules', 'Insured & professional', 'Satisfaction guaranteed']
+      }
+    },
+    ar: {
+      a11y: { skip: 'تخطّي إلى المحتوى' },
+      map: { placeholder: 'خريطة' },
+      nav: { home: 'الرئيسية', services: 'الخدمات', about: 'من نحن', gallery: 'المعرض', testimonials: 'آراء العملاء', contact: 'اتصل بنا' },
+      cta: { whatsapp: 'واتساب', call: 'اتصال', bookWhatsApp: 'احجز عبر واتساب', callNow: 'اتصل الآن' },
+      servicesSection: { title: 'خدماتنا', subtitle: 'تنظيف عالي الجودة مرن ومناسب لاحتياجاتك.' },
+      gallerySection: { title: 'المعرض', subtitle: 'أعمالنا ونتائجنا الأخيرة.' },
+      testimonialsSection: { title: 'ماذا يقول عملاؤنا', subtitle: 'آراء حقيقية من عملاء سعداء.' },
+      contactSection: { title: 'تواصل معنا', subtitle: 'نستجيب سريعًا عبر الواتساب والهاتف.', phone: 'الهاتف', address: 'العنوان', hours: 'الساعات', chatWhatsapp: 'تحدث عبر الواتساب', callUs: 'اتصل بنا' },
+      footer: { rights: 'جميع الحقوق محفوظة.' },
+      about: {
+        title: 'من نحن',
+        body: 'نقدم خدمات تنظيف احترافية للمنازل والمكاتب والمرافق باستخدام مواد آمنة وطرق فعّالة لضمان نتائج ممتازة في كل مرة.',
+        bullets: [
+          'فريق ذو خبرة ومُعتمد',
+          'مواد وأساليب صديقة للبيئة',
+          'أسعار واضحة بدون مفاجآت',
+          'دقة في المواعيد دائمًا'
+        ],
+        whyTitle: 'لماذا نحن',
+        features: ['متاحون 24/7', 'جداول مرنة', 'فريق محترف ومؤمَّن', 'رضاكم مضمون']
+      }
+    }
+  },
   hero: {
     title: "Professional Cleaning Services",
     subtitle: "Residential and commercial cleaning. Trusted team. Clear pricing.",
