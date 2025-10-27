@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ECD836DC-07BD-4299-8900-6981665ADEC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Api", "src\Tms.Api\Tms.Api.csproj", "{9FC72E63-F49E-4C9B-B094-FF31E97B45E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Application", "src\Tms.Application\Tms.Application.csproj", "{5C584420-73CA-4B8B-A070-DB6B20CAE51B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Domain", "src\Tms.Domain\Tms.Domain.csproj", "{A591CAD5-87FA-401D-A75F-89450021274C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Infrastructure", "src\Tms.Infrastructure\Tms.Infrastructure.csproj", "{7F2AB358-6160-479E-A706-E52B0DD3E6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.Web", "src\Tms.Web\Tms.Web.csproj", "{6E746438-129B-459C-BB9F-57415371E481}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tms.SocketServer", "src\Tms.SocketServer\Tms.SocketServer.csproj", "{22019FFF-338C-4FDB-B9AB-CFE220E6069F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FC72E63-F49E-4C9B-B094-FF31E97B45E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FC72E63-F49E-4C9B-B094-FF31E97B45E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FC72E63-F49E-4C9B-B094-FF31E97B45E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FC72E63-F49E-4C9B-B094-FF31E97B45E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C584420-73CA-4B8B-A070-DB6B20CAE51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C584420-73CA-4B8B-A070-DB6B20CAE51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C584420-73CA-4B8B-A070-DB6B20CAE51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C584420-73CA-4B8B-A070-DB6B20CAE51B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A591CAD5-87FA-401D-A75F-89450021274C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A591CAD5-87FA-401D-A75F-89450021274C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A591CAD5-87FA-401D-A75F-89450021274C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A591CAD5-87FA-401D-A75F-89450021274C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F2AB358-6160-479E-A706-E52B0DD3E6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F2AB358-6160-479E-A706-E52B0DD3E6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F2AB358-6160-479E-A706-E52B0DD3E6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F2AB358-6160-479E-A706-E52B0DD3E6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E746438-129B-459C-BB9F-57415371E481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E746438-129B-459C-BB9F-57415371E481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E746438-129B-459C-BB9F-57415371E481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E746438-129B-459C-BB9F-57415371E481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22019FFF-338C-4FDB-B9AB-CFE220E6069F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22019FFF-338C-4FDB-B9AB-CFE220E6069F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22019FFF-338C-4FDB-B9AB-CFE220E6069F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22019FFF-338C-4FDB-B9AB-CFE220E6069F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9FC72E63-F49E-4C9B-B094-FF31E97B45E7} = {ECD836DC-07BD-4299-8900-6981665ADEC0}
+		{5C584420-73CA-4B8B-A070-DB6B20CAE51B} = {ECD836DC-07BD-4299-8900-6981665ADEC0}
+		{A591CAD5-87FA-401D-A75F-89450021274C} = {ECD836DC-07BD-4299-8900-6981665ADEC0}
+		{7F2AB358-6160-479E-A706-E52B0DD3E6A5} = {ECD836DC-07BD-4299-8900-6981665ADEC0}
+		{6E746438-129B-459C-BB9F-57415371E481} = {ECD836DC-07BD-4299-8900-6981665ADEC0}
+		{22019FFF-338C-4FDB-B9AB-CFE220E6069F} = {ECD836DC-07BD-4299-8900-6981665ADEC0}
+	EndGlobalSection
+EndGlobal
